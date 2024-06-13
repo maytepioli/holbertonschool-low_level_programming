@@ -1,0 +1,29 @@
+#include <stdlib.h>
+#include <time.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+    int n;
+
+    srand(time(NULL));
+
+    n = rand() % 201 - 100; // Generates a number between -100 and 100
+
+
+    printf("The number is: %d\n", n);
+
+    if (n > 0) {
+        printf("It is positive\n");
+    } else if (n < 0) {
+        printf("It is negative\n");
+    } else {
+        printf("It is zero\n");
+    }
+
+    return 0;
+}

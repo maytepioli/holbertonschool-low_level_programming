@@ -1,7 +1,8 @@
 #include "main.h"
 
-/*
- * int _abs - que calcule el valor absoluto de un número entero
+/**
+ * _abs - que calcule el valor absoluto de un número entero
+ * @n: numero
  * Return: 0
  */
 int _abs(int n)

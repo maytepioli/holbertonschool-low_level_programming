@@ -6,10 +6,10 @@
  * Return: Always 0.
  */
 void puts2(char *str)
-{ 	
-	int num; 
+{
+	int num;
 
-	for (num = 0; str [num] != '\0'; num++) 
+	for (num = 0; str[num] != '\0'; num++)
 	{
 		if (num % 2 == 0)
 		{

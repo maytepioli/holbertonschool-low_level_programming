@@ -14,11 +14,11 @@ void puts_half(char *str)
 	{
 
 	}
-	num++;
 	if (num % 2 == 0)
 		i = num / 2;
 	else
 	{
+		num++;
 		i = (num - 1) / 2;
 		
 	}

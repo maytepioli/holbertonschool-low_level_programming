@@ -18,9 +18,8 @@ void puts_half(char *str)
 		i = num / 2;
 	else
 	{
-		num++;
 		i = (num - 1) / 2;
-		
+		i++;	
 	}
 
 	for (; i < num; i++)

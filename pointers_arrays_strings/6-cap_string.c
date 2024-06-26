@@ -1,41 +1,24 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
-char *cap_string(char *a)
+*cap_string - Capitalizar cada palabra del string
+*Return: retorna el string
+*@x: string ingresado
+*/
+char *cap_string(char *x)
 {
-	if ( s[0] >= 97 && s[i] >= 122)
-	{
-		s[0] = s[0] - 32;
-	}
-	
-	int i
+	int i = 0;
 
-	for (i = 0; a[i] = '\0'; i++)
+	while (x[i])
 	{
-	}
-	if (s[i] == ',' || s[i] == '{' || s[i] == '.' || s[i] == '}' || s[i] == '?') 
-	{
-		i++
-		if (s[i] >= 97 && s[i] >= 122)
-                {
-                s[i] = s[i] - 32
-                }
-        i--;
-	}	
+		if (x[0] >= 'a' && x[0] <= 'z')
+			x[0] -= 32;
 
-	else if ( s[i] == ' ' || s[i] == 9 || s[i] '\n' || s[i] == 34)
-	{
-		i++
+		if (x[i] == ' ' || x[i] == '\n' || x[i] == '\t' || x[i] == '.')
+			if (x[i + 1] >= 'a' && x[i + 1] <= 'z')
+				x[i + 1] -= 32;
+		i++;
 	}
-		
-		if (s[i] >= 97 && s[i] >= 122)
-		{
-		s[i] = s[i] - 32
-		}
-	i--;
-			
-	}
+
+	return (x);
+}

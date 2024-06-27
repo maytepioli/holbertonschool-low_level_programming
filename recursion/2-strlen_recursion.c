@@ -1,23 +1,15 @@
 #include "main.h"
 
-
-int recursion_aux(char *s)
-{
-
-	if (*s == '\0')
-		return (0);
-	else 
-		return 1 + recursion_aux(s + 1);
-{
-
 /**
- *_stlen_recursion - check the code
+ * _strlen_recursion - devuelve la longitud de una cadena.
+ * @s: la cadena a medir.
  *
- * Return: Always 0.
+ * Return: la longitud de la cadena.
  */
 int _strlen_recursion(char *s)
-{	
-
-	return recursion_aux(s);
-	
+{
+	if (*s == '\0')
+		return (0);
+	else
+		return (1 + _strlen_recursion(s + 1));
 }

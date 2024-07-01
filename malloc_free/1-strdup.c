@@ -2,9 +2,9 @@
 #include  <stdlib.h>
 /**
  * _strdup - e contiene una copia de la cadena dada como parámetro
- *@len: recoore el string
- *@copy: espacio para la copia
- *@i:asigno espacio
+ *
+ *@str: str
+ *Return: 0
  */
 char *_strdup(char *str)
 {

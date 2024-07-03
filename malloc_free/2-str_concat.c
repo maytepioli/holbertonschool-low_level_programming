@@ -21,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 == NULL)
 	{
-		s1 = "";
+		s = "";
 	}
 	for (a = 0; a[s1] != '\0'; a++)
 	{

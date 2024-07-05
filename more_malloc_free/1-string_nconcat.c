@@ -11,7 +11,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
-	size_t len1, len2, concat_size;
+	unsigned int len1, len2, copi1, lentotal, copi2;
 	char *concat;
 
 	if (s1 == NULL)
@@ -23,26 +23,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-
+	for (len1 = 0; s1[len1] != '\0'; len1++)
+	{}
+	for (len2 = 0; s2[len2] != '\0'; len2++)
+	{}
 	if (n < len2)
 	{
 		len2 = n;
 	}
-
-	concat_size = len1 + n + 1;
-
-	concat = malloc(concat_size * sizeof(char));
+	lentotal = len1 + len2;
+	concat = (char *)malloc((lentotal + 1) * sizeof(char));
 
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
-
-	strcpy(concat, s1);
-	strncat(concat + len1, s2, len2);
-	concat[concat_size - 1] = '\0';
+	for (copi1 = 0; s1[copi1] != '\0'; copi1++)
+	{
+		concat[copi1] = s1[copi1];
+	}
+	for (copi2 = 0; copi2 < len2; copi2++)
+	{
+		concat[copi1 + copi2] = s2[copi2];
+	}
+	concat[copi1 + copi2] = '\0';
 
 	return (concat);
 }

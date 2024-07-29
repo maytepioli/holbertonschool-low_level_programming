@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lists.h"
+
+int _strlen(const char *str);
 /**
  *add_node - agregue un nuevo nodo al comienzo de un list_t lista
  *@head: encabezado el primer node
@@ -30,14 +32,12 @@ list_t *add_node(list_t **head, const char *str)
 	return (new_node);
 }
 
-#include "lists.h"
-
 /**
  *_strlen - la funcion que cuenta los caracteres
  *@s: string
  * Return: 0.
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 
 	int len;
